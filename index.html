@@ -9,8 +9,74 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-md sticky-top bg-body">
+        <div class="container-fluid"><a class="navbar-brand" href="/">CRUD To-Do App</a><span class="d-none d-md-block vr me-2"></span><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/Gregory-AM/CRUD-TODO">Repository</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav><!-- Start: Hero Banner -->
+    <section class="py-4 py-xl-5">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
+                    <div>
+                        <h2 class="text-uppercase fw-bold mb-3">crud To-Do application</h2>
+                        <p class="mb-4">A responsive and interactive <strong>CRUD&nbsp;(Create, Read, Update, Delete)</strong> To-Do application designed to showcase essential web development skills. This project demonstrates the integration of modern front-end technologies and libraries to deliver a functional, user-friendly experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End: Hero Banner -->
+    <section>
+        <div class="container my-2">
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a class="nav-link active bg-success" href="#" data-bs-target="#modal-add-note" data-bs-toggle="modal">Add To-Do</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row gx-2 gy-2 row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-3">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4>New Note Text, That's All</h4><span class="vr mx-2"></span>
+                            <div class="text-end">
+                                <h6 class="text-muted mb-0">1:28PM</h6>
+                                <h6 class="text-muted mb-2">12/10/2024</h6>
+                            </div>
+                        </div>
+                        <hr class="mt-0 mb-2">
+                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                    </div>
+                    <div class="d-flex justify-content-end card-footer"><button class="btn btn-sm d-flex justify-content-center align-items-center p-2" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="left" type="button" title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-pen fs-6">
+                                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"></path>
+                            </svg></button><button class="btn btn-sm d-flex justify-content-center align-items-center ms-2 p-2" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="right" type="button" title="Delete"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-trash fs-6">
+                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"></path>
+                                <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"></path>
+                            </svg></button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-add-note">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Note</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body"><input type="text" class="w-100 mb-2" placeholder="Note Title"><textarea class="w-100 h-100" placeholder="Note Body"></textarea></div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-success" type="button">Save Note</button></div>
+            </div>
+        </div>
+    </div>
     <script src="assets/js/jquery.min.js?h=6bcc3684f18aa21874fa709f122723cf"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js?h=374d178d651fa0eaf680a1fa7b40c788"></script>
+    <script src="assets/js/bs-init.js?h=f85385df9bc7fca4241bc1dbf53b9d61"></script>
+    <script src="assets/js/app.js?h=d41d8cd98f00b204e9800998ecf8427e"></script>
 </body>
 
 </html>
